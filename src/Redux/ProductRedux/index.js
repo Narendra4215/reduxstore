@@ -1,0 +1,1 @@
+export {getproduct} from './Product.action'

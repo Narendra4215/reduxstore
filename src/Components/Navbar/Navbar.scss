@@ -1,0 +1,149 @@
+@mixin icons {
+    display: inline-grid;
+    color: rgb(24, 24, 24);
+    justify-items: center;
+    padding-left: 2rem;
+    font-size: .9rem;
+    font-weight: 900;
+}
+
+@mixin searchbutton {
+    font-size: 14px;
+    height: 20px;
+    line-height: 24px;
+    color: #696e79;
+    -webkit-box-sizing: content-box;
+    box-sizing: content-box;
+    padding: 8px 10px 10px;
+    border: 1px solid #f5f5f6;
+    border-radius: 0 4px 4px 0;
+    background: #f5f5f6;
+}
+
+.navbar {
+    margin-top: -.5rem;
+    background-color: white;
+    position: fixed;
+    display: flex;
+    box-shadow: 6px 2px 4px rgba(7, 6, 6, 0.2);
+    width: 100%;
+    padding: .8rem 1.2rem;
+    height: 3rem;
+
+    &-logo {
+        height: 3.6rem;
+        width: 5rem;
+        border-radius: 60%;
+    }
+
+    &-item {
+        padding: 1rem;
+    }
+
+    &-items {
+        display: none;
+        align-items: center;
+        justify-content: center;
+        height: 30px;
+        text-transform: capitalize;
+        width: 30%;
+        margin-left: 28%;
+        position: fixed;
+        margin-top: 40px;
+        padding: 2rem;
+        margin-left: 13%;
+        background-color: white;
+        &:hover{
+            color: rgb(0, 0, 0);
+        }
+
+    }
+
+    &-link {
+        text-decoration: none;
+        color: rgb(15, 15, 15);
+    }
+}
+
+.search {
+    margin-left: 40%;
+
+    &-input {
+        @include searchbutton();
+        width: 20rem;
+
+    }
+
+    &-field {
+        margin-left: 30px;
+    }
+
+}
+
+.icons {
+    align-items: center;
+    margin-left: auto;
+    display: flex;
+
+    &-profile,
+    &-bag,
+    &-whishlist {
+        @include icons();
+    }
+
+    &-bag {
+        padding-right: 3rem;
+    }
+}
+
+.navbar-category {
+    position: absolute;
+    padding-top: 1.4rem;
+    margin-left: 25%;
+    text-transform: uppercase;
+    font-size: 1rem;
+    gap: 2rem;
+    font-weight: 800;
+    margin-right: 3rem;
+    cursor: pointer;
+
+    &2 {
+        position: fixed;
+    }
+
+}
+
+.navbar-category:hover+.navbar-items {
+    display: block;
+    cursor: pointer;
+}
+
+.navbar-category:hover~.navbar-items,
+.navbar-items:hover {
+    display: flex;
+
+}
+
+@media only screen and (max-width: 1100px) {
+    .search-input {
+        @include searchbutton();
+        width: 242px;
+    }
+}
+
+@media only screen and (max-width: 450px) {
+    .search-input {
+        @include searchbutton();
+        width: 202px;
+    }
+    .navbar-category {
+        margin-left: 37%;
+    }
+}
+@media only screen and (max-width: 450px) {
+    .navbar-category:hover~.navbar-items,
+.navbar-items:hover {
+    display: inline;
+
+}
+}
