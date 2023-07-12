@@ -10,7 +10,7 @@ const fetchItemReducer = (state = initialState, action) => {
     case GET_CATEGORY_ITEM:
       return {
         ...state,
-        categoryItems: action.payload
+        categoryItems: action.payload,
       };
     case GET_SORT_DATA:
       const { sortby } = action.payload;

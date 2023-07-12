@@ -11,13 +11,13 @@ const Productrender = (props) => {
   return <ProductContainer navigate={navigate} params={params} {...props} />
 }
 
-const mapStateToProps=(state)=>{
-  productData: state.data3.productData;
-}
+const mapStateToProps=(state)=>({
+  productData: state.data3.productData
+})
 
-const mapDispatchToProps=(dispatch)=>{
+const mapDispatchToProps=(dispatch)=>({
   getproduct:(data)=>dispatch(getproduct(data))
-}
+})
 
 
  class ProductContainer extends PureComponent {
@@ -53,9 +53,6 @@ const mapDispatchToProps=(dispatch)=>{
     return (
       <>
         <ProductComponent {...this.props}
-
-        //  productData={productData}
-        // handleAddCart={this.handleAddCart}
 
         />
 

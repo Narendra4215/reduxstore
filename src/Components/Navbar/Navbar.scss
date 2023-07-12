@@ -46,7 +46,6 @@
         justify-content: center;
         height: 30px;
         text-transform: capitalize;
-        width: 30%;
         margin-left: 28%;
         position: fixed;
         margin-top: 40px;
@@ -136,9 +135,22 @@
         @include searchbutton();
         width: 202px;
     }
-    .navbar-category {
+    .navbar{
+
+    &-category {
         margin-left: 37%;
     }
+    &-items{
+        background-color: rgb(240, 247, 247);
+        height: 180px;
+        text-align: center;
+        margin-left: 20%;
+        margin-top: 60px;
+        &:hover{
+            color: aqua;
+        }
+    }
+}
 }
 @media only screen and (max-width: 450px) {
     .navbar-category:hover~.navbar-items,
