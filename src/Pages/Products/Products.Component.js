@@ -9,9 +9,7 @@ export default class ProductComponent extends PureComponent {
       <div className='header'>
         <div className='product'>
           <div className='product-img'>
-            <img alt='' className='product-img-img' src={productData.image} /> <br />
-            <button className='product-cart' id="demo" onClick={handleAddCart} >Add to Cart</button>
-            <button className='product-buy'>Buy Now</button>
+            <img alt='' className='product-img-img' src={productData.image} />
           </div>
           <div className='product-details'>
             <li className='product-title'>{productData.title}</li>
@@ -29,8 +27,10 @@ export default class ProductComponent extends PureComponent {
               <strike>Rs.200</strike>
               <span>(27% OFF)</span>
             </li>
-
+            <button className='product-cart' id="demo" onClick={handleAddCart} >Add to Cart</button>
+            <button className='product-buy'>Buy Now</button>
           </div>
+
         </div>
       </div>
 

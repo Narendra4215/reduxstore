@@ -6,14 +6,12 @@
         font-size: 1rem;
         font-weight: 200;
         font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-
     }
 
     &-sort {
         position: fixed;
         margin-top: 5.75rem;
         margin-left: 80%;
-        color: green;
     }
 
     &-sort2 {
@@ -28,96 +26,161 @@
         cursor: pointer;
         display: flex;
         flex-wrap: wrap;
-        margin-left: 10%;
-
     }
 
     &-li {
-        background-color: rgb(79, 86, 79);
-
+        height: 200px;
+        width: 190px;
     }
 
     &-image {
-        height: 250px;
-        width: 190px;
+        margin-top: 30px;
+        border-radius: 20px;
+        height: 130px;
+        width: 120px;
+        margin-left: 38px; 
+
+        &:hover{
+            mix-blend-mode: darken;
+            margin-top: 25px;
+            border-radius: 10px;
+            height: 150px;
+            width: 150px;
+            margin-left: 20px;
+        }
     }
 
     &-one {
 
-        height: 25rem;
+        height: 28rem;
 
         & ol {
             position: static;
             margin-top: 8.13rem;
-            width: 14rem;
+            width: 12rem;
             list-style: none;
         }
     }
+    &-icon{
+        text-align: center;
+        line-height: 2;
+    }&-btn-cart{
+        background-color: #fa9a09;
+        text-align: center;
+        border: 2px solid white;
+        margin-left: 8%;
+        color: rgb(9, 2, 2);
+        font-weight: 500;
+        width: 160px;
+        height: 2rem;
+    }
 
     &-border {
-        width: 190px;
-
-        border: 2px solid rgb(230, 236, 236);
+        width: 200px;
+        border:none;
+        box-shadow: 0px 0px 6px 0px rgb(20, 3, 3);
     }
-
+    &-tp{
+        display: flex;
+     }
     &-rate li {
         display: inline;
-
+      
     }
-
-    &-desc {
-        color: #535766;
-        font-size: 14px;
-        line-height: 1.5;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        white-space: nowrap;
-        font-weight: 400;
+    &-desc{
+    color: #535766;
+    font-size: 14px;
+    line-height: 1.5;
+    width: 160px;
+    height: 60px;
+    font-weight: 400;
     }
-
-    &-price {
-        line-height: 1.5;
-        font-size: 14px;
-
-        color: rgb(2, 10, 10);
-
-        & strike {
-            color: #7e818c;
-            font-weight: 400;
-            margin-left: 5px;
-            font-size: 12px;
-
-
-        }
-
-        & span {
+    &-star-icon{
+        margin-top: 5px;
+    }
+    &-price{
+    line-height: 2.9;
+    font-size: 14px;
+    color: #d24b07;
+        & span{
             color: #ff905a;
             font-weight: 400;
             font-size: 12px;
             margin-left: 5px;
-
         }
     }
+    &-button{
+        background-color: rgb(20, 22, 32);
+        color: white;
+        margin-left: 38%;
+        border-radius: 5px;
+    }
+
 
     &-title {
         font-size: 16px;
         font-weight: 700;
         color: #282c3f;
         margin-top: 8px;
-        line-height: 1;
+        line-height: 2;
         margin-bottom: 6px;
         width: 200px;
-
 
         &:hover {
             color: rgb(54, 95, 185);
 
         }
-    }
 
     &-off {
         color: green;
         line-height: 1.4;
         font-size: 11px;
     }
+}
+
+}
+@media only screen and (max-width: 1100px){
+    .category {
+       &-sort {
+            position: fixed;
+            margin-top: 5.75rem;
+            margin-left: 70%;
+        }
+    
+        &-sort2 {
+            color: rgb(10, 12, 12);
+            background-color: rgb(212, 212, 212);
+        }
+}
+}
+
+
+@media only screen and (max-width: 600px){
+    .category {
+       &-sort {
+            position: fixed;
+            margin-top: 5.75rem;
+            margin-left: 50%;
+        }
+    
+        &-sort2 {
+            color: rgb(10, 12, 12);
+            background-color: rgb(212, 212, 212);
+        }
+}
+}
+
+@media only screen and (max-width: 450px){
+    .category {
+       &-sort {
+            position: fixed;
+            margin-top: 5.75rem;
+            margin-left: 20%;
+        }
+    
+        &-sort2 {
+            color: rgb(10, 12, 12);
+            background-color: rgb(212, 212, 212);
+        }
+}
 }

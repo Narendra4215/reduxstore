@@ -1,18 +1,13 @@
 import React, { PureComponent } from 'react';
-import { useNavigate, useParams } from 'react-router-dom';
 import ProductComponent from './Products.Component';
 import { getproduct } from '../../Redux/ProductRedux/Product.action';
 import { connect } from 'react-redux';
 
-const Productrender = (props) => {
-  const navigate = useNavigate();
-  const params = useParams();
-  console.log(params)
-  return <ProductContainer navigate={navigate} params={params} {...props} />
-}
+
 
 const mapStateToProps=(state)=>({
-  productData: state.data3.productData
+  productData: state.product.productData,
+  id: state.category.product,
 })
 
 const mapDispatchToProps=(dispatch)=>({
@@ -26,14 +21,16 @@ const mapDispatchToProps=(dispatch)=>({
     this.fetchProductData();
   }
   componentDidUpdate(prevProps) {
-    if (prevProps.params.id !== this.props.params.id) {
+    if (prevProps.id !== this.props.id)
+     {
       this.fetchProductData();
     }
   }
 
 
   fetchProductData() {
-    const { id } = this.props.params;
+    const { id } = this.props;
+    console.log(id)
     fetch(`https://fakestoreapi.com/products/${id}`)
       .then((res) => res.json())
       .then((data) => {
@@ -60,4 +57,4 @@ const mapDispatchToProps=(dispatch)=>({
     )
   }
 }
-export default connect(mapStateToProps,mapDispatchToProps) (Productrender)
+export default connect(mapStateToProps,mapDispatchToProps) (ProductContainer)

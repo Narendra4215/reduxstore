@@ -5,6 +5,6 @@ import productReducer from "./Redux/ProductRedux/Product.reducer";
 
 export const Reducer= combineReducers({
     data:getCategories,
-    data2:fetchItemReducer,
-    data3:productReducer,
+    category:fetchItemReducer,
+    product:productReducer,
 })

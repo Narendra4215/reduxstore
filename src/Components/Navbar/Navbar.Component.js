@@ -14,10 +14,10 @@ export default class NavbarComponent extends PureComponent {
                 <header>
                     <div className='navbar'>
                         <Link to="/">
-                        <div>
-                            <img src={logo} alt='' className='navbar-logo' />
-                        </div>
-                        </Link> 
+                            <div>
+                                <img src={logo} alt='' className='navbar-logo' />
+                            </div>
+                        </Link>
 
                         <div className='search'>
                             <input type='search' className='search-input' placeholder='Search for products, brands and more' />

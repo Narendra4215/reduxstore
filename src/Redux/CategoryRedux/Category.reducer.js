@@ -1,8 +1,10 @@
-import { GET_CATEGORY_ITEM, GET_SORT_DATA } from "./Category.action";
+import { GET_CATEGORY_ITEM, GET_PRODUCT, GET_SORT_DATA } from "./Category.action";
 
 const initialState = {
   categoryItems: [],
-  sortby: ""
+  sortby: "",
+  product:'',
+  loading: false,
 };
 
 const fetchItemReducer = (state = initialState, action) => {
@@ -11,6 +13,7 @@ const fetchItemReducer = (state = initialState, action) => {
       return {
         ...state,
         categoryItems: action.payload,
+        loading: false,
       };
     case GET_SORT_DATA:
       const { sortby } = action.payload;
@@ -36,8 +39,15 @@ const fetchItemReducer = (state = initialState, action) => {
       return {
         ...state,
         categoryItems: sortedData,
-        sortby
+        sortby,
+        loading: false,
       };
+      case GET_PRODUCT :
+        return{
+          ...state,
+          product: action.payload,
+          loading: false,
+        }
     default:
       return state;
   }

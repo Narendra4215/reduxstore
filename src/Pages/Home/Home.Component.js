@@ -7,9 +7,10 @@ export default class HomeComponent extends PureComponent {
       <div className='home'>
 
           <div className='home-image'>
-          <img className='home-image-img' alt='' src={store} width="100%" height={550} />
+          <img className='home-image-img' alt='' src={store} width="100%" height={590} />
           </div>
       </div>
     )
   }
 }
+4
